@@ -5,10 +5,26 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
-getComputerChoice(){
-    var rk = "Rock";
-    var pp = "Paper";
-    var si = "Scissors";
+// get a r,p,s choice from the computer
+function getComputerChoice(){
 
+    const rk = "Rock";
+    const pp = "Paper";
+    const si = "Scissors";
+    var choice = getRandomInt(3);
+
+    switch (choice) {
+        case 0:
+            return rk;
+            break;
+        case 1:
+            return pp;
+            break;
+        case 2:
+            return si;
+            break;
+        default:
+            console.log("Sorry something went wrong!");
+    }
 
 }
