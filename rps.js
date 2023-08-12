@@ -52,3 +52,16 @@ function play(playerSelection, computerSelection) {
     }
 
 }
+
+function playRounds() {
+
+    var rounds = Integer(window.prompt("How many rounds do you want to play?"));
+
+    for (let index = 0; index < rounds; index++) {
+        var playersChoice =  window.prompt("Rock, Paper or Scissors?");
+        var compChoice = getComputerChoice();
+
+        play(playersChoice, compChoice);
+    }
+    
+}
