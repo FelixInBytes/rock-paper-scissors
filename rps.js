@@ -28,3 +28,27 @@ function getComputerChoice(){
     }
 
 }
+
+function play(playerSelection, computerSelection) {
+    
+
+    var psUpper = playerSelection.toUpperCase();
+    var csUpper = computerSelection.toUpperCase();
+
+    var win = "You Win! " + psUpper + " beats " + csUpper;
+    var lose = "You Lose! " + csUpper + " beats " + psUpper;
+
+
+    if (psUpper == "ROCK" && csUpper == "SCISSORS") {
+        return win;
+    }else if(psUpper == "SCISSORS" && csUpper == "PAPER"){
+        return win;
+    }else if(psUpper == "PAPER" && csUpper == "ROCK"){
+        return win;
+    }else if(psUpper == csUpper){
+        return "Tie!";
+    }else{
+        return lose;
+    }
+
+}
