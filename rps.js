@@ -48,22 +48,22 @@ buttons.forEach((button) => {
       this.value.toUpperCase());
     var csUpper = getComputerChoice().toUpperCase();
 
-    console.log(psUpper);
-    console.log(csUpper);
+    document.getElementById("playersC").innerHTML = psUpper;
+    document.getElementById("computerC").innerHTML = csUpper;
 
     var win = "You Win! " + psUpper + " beats " + csUpper;
     var lose = "You Lose! " + csUpper + " beats " + psUpper;
 
     if (psUpper == "ROCK" && csUpper == "SCISSORS") {
-      console.log(win);
+      document.getElementById("result").innerHTML = win;
     } else if (psUpper == "SCISSORS" && csUpper == "PAPER") {
-      console.log(win);
+      document.getElementById("result").innerHTML = win;
     } else if (psUpper == "PAPER" && csUpper == "ROCK") {
-      console.log(win);
+      document.getElementById("result").innerHTML = win;
     } else if (psUpper == csUpper) {
-      console.log("Tie!");
+      document.getElementById("result").innerHTML = "Tie!";
     } else {
-      console.log(lose);
+      document.getElementById("result").innerHTML = lose;
     }
   }
 });

@@ -15,25 +15,28 @@
     max-width: 100%;
 }
 
-.playersC{
+#playersC{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
+    width: 200px;
 }
 
-.computerC{
+#computerC{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
+    width: 200px;
 }
 
-.result{
+#result{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
+    width: 200px;
 }
 
 
