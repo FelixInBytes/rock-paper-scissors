@@ -5,11 +5,14 @@
     align-items: center;
     height: 1000px;
     width: auto;
+    gap: 10px;
 }
 
 .stats{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    gap: 10px;
     align-items: center;
     height: 300px;
     max-width: 100%;
@@ -32,6 +35,28 @@
 }
 
 #result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 200px;
+}
+
+#playerPoints{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 200px;
+}
+#computerPoints{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 200px;
+}
+#gameEnd{
     display: flex;
     justify-content: center;
     align-items: center;

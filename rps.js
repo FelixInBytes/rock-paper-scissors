@@ -26,19 +26,10 @@ function getComputerChoice() {
   }
 }
 
-function playRounds() {
-  var rounds = Number(window.prompt("How many rounds do you want to play?"));
-
-  for (let index = 0; index < rounds; index++) {
-    var playersChoice = window.prompt("Rock, Paper or Scissors?");
-    var compChoice = getComputerChoice();
-
-    var end = play(playersChoice, compChoice);
-    console.log(end);
-  }
-}
 
 let buttons = document.querySelectorAll("button");
+var pCount = 0;
+var cCount = 0;
 
 buttons.forEach((button) => {
   button.addEventListener("click", playGame);
@@ -48,22 +39,35 @@ buttons.forEach((button) => {
       this.value.toUpperCase());
     var csUpper = getComputerChoice().toUpperCase();
 
+
     document.getElementById("playersC").innerHTML = psUpper;
     document.getElementById("computerC").innerHTML = csUpper;
+    document.getElementById("playerPoints").innerHTML = pCount;
+    document.getElementById("computerPoints").innerHTML = cCount;
 
     var win = "You Win! " + psUpper + " beats " + csUpper;
     var lose = "You Lose! " + csUpper + " beats " + psUpper;
 
-    if (psUpper == "ROCK" && csUpper == "SCISSORS") {
-      document.getElementById("result").innerHTML = win;
-    } else if (psUpper == "SCISSORS" && csUpper == "PAPER") {
-      document.getElementById("result").innerHTML = win;
-    } else if (psUpper == "PAPER" && csUpper == "ROCK") {
-      document.getElementById("result").innerHTML = win;
-    } else if (psUpper == csUpper) {
-      document.getElementById("result").innerHTML = "Tie!";
-    } else {
-      document.getElementById("result").innerHTML = lose;
+      if (psUpper == "ROCK" && csUpper == "SCISSORS") {
+        document.getElementById("result").innerHTML = win;
+        pCount += 1;
+      } else if (psUpper == "SCISSORS" && csUpper == "PAPER") {
+        document.getElementById("result").innerHTML = win;
+        pCount += 1;
+      } else if (psUpper == "PAPER" && csUpper == "ROCK") {
+        document.getElementById("result").innerHTML = win;
+        pCount += 1;
+      } else if (psUpper == csUpper) {
+        document.getElementById("result").innerHTML = "Tie!";
+      } else {
+        document.getElementById("result").innerHTML = lose;
+        cCount += 1;
+      }
+
+    if (pCount == 5) {
+      document.getElementById("gameEnd").innerHTML = "Player Won the Game!";
+    } else if (cCount == 5) {
+      document.getElementById("gameEnd").innerHTML = "Computer Won the Game!";
     }
   }
 });
