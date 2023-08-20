@@ -1,10 +1,41 @@
 .container-ui{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 1000px;
     width: auto;
 }
+
+.stats{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    max-width: 100%;
+}
+
+.playersC{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.computerC{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
 
 .buttons{
     display: flex;
