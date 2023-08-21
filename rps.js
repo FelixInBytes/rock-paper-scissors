@@ -36,6 +36,13 @@ buttons.forEach((button) => {
 });
 
 
+function removeListener(){
+  buttons.forEach(button => {
+    button.removeEventListener("click", playGame);
+  })
+}
+
+
 function playGame() {
   var psUpper = (document.getElementsByClassName(".playerBTN").innerHTML =
     this.value.toUpperCase());
@@ -68,14 +75,10 @@ function playGame() {
 
     if (pCount == 5) {
       document.getElementById("gameEnd").innerHTML = "Player Won the Game!";
-      buttons.forEach(button => {
-        button.removeEventListener("click", playGame);
-      })
+      removeListener();
     } else if (cCount == 5) {
       document.getElementById("gameEnd").innerHTML = "Computer Won the Game!";
-      buttons.forEach(button => {
-        button.removeEventListener("click", playGame);
-      })
+      removeListener();
     }
   
     
